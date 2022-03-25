@@ -110,19 +110,20 @@ export const ClientCard = styled.div`
     border-radius: 10px;
     padding: 10px;
 
-    ${(props) => props.type === 1 && `
-        bottom: 80px;
-        right: -50px;
-    `}
 
-    img {
-        width: 80px;
-        /* height: 60px; */
-        border-radius: 50%;
-        border: 2px solid #DEDEDE;
-        margin-right: 10px;
+    .avatar {
+        text-align: center;
+        img {
+            width: 80px;
+            border-radius: 50%;
+            border: 2px solid #DEDEDE;
+            margin-right: 10px;
+        }
+        .stars {
+            margin-top: 25px;
+            color: #ffb905;
+        }
     }
-
     .text {
         p {
             color: var(--black01);
@@ -134,6 +135,21 @@ export const ClientCard = styled.div`
             color: var(--black02);
         }
     }
+    
+    ${(props) => props.type === 1 && `
+        bottom: 80px;
+        right: -50px;
+    `}
+    ${(props) => props.type === 2 && `
+        bottom: 80px;
+        right: -50px;
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.08);
+    `}
+    ${(props) => props.type === 3 && `
+        bottom: -80px;
+        left: -200px;
+        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.08);
+    `}
 `
 
 export const SectionHeader = styled.div`
