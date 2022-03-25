@@ -49,26 +49,32 @@ export const GlobalStyles = createGlobalStyle`
     h1 {
         font-size: 100px;
         font-weight: 800;
+        color: var(--black01);
     }
     h2 {
         font-size: 65px;
         font-weight: 600;
+        color: var(--black01);
     }
     h3 {
         font-size: 60px;
         font-weight: 600;
+        color: var(--black01);
     }
     h4 {
         font-size: 24px;
         font-weight: 500;
+        color: var(--black01);
     }
     h5 {
         font-size: 22px;
         font-weight: 500;
+        color: var(--black01);
     }
     h6 {
         font-size: 20px;
         font-weight: 600;
+        color: var(--black01);
     }
     p {
         font-size: 16px;

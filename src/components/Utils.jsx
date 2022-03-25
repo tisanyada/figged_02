@@ -43,7 +43,7 @@ export const Logo = styled.a`
 
 export const Button = styled(motion.button)`
     outline: none;
-    border: none;
+    /* border: 0; */
     font-size: 16px;
     cursor: pointer;
 
@@ -58,12 +58,17 @@ export const Button = styled(motion.button)`
     box-shadow: ${(props) => props.shadow === 1 && '0px 30px 30px rgba(99, 122, 166, 0.1)'};
     box-shadow: ${(props) => props.shadow === 2 && '0px 10px 30px -10px rgba(0, 0, 0, 0.5)'};
     border-radius: ${(props) => props.radius ? `${props.radius}px` : '10px'};
-    
+    border: ${(props)=> props.border ? `
+        border: ${props.border}px solid ${props.color};
+    `: `
+        none;
+    `};
+
     ${(props) => props.inputBtn && `
         position: absolute;
         right: 10px;
         top: 30px;
-        `}
+    `};
 `
 
 export const ButtonIconed = styled(motion.button)`
@@ -111,8 +116,8 @@ export const ClientCard = styled.div`
     `}
 
     img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        /* height: 60px; */
         border-radius: 50%;
         border: 2px solid #DEDEDE;
         margin-right: 10px;
@@ -133,7 +138,7 @@ export const ClientCard = styled.div`
 
 export const SectionHeader = styled.div`
     text-align: center;
-    margin-top: 100px;
+    margin-top: 150px;
 
     h2 {
         font-size: 65px;

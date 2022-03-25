@@ -7,6 +7,7 @@ import client from '@/assets/client-1.png'
 import decorator1 from '@/assets/decorator-1.png'
 import decorator2 from '@/assets/decorator-2.png'
 import decorator3 from '@/assets/decorator-3.png'
+import decorator4 from '@/assets/decorator-4.png'
 import heroimage from '@/assets/heroimage.png'
 import homebg1 from '@/assets/homebg-1.png'
 import homebg2 from '@/assets/homebg-2.png'
@@ -33,6 +34,7 @@ export default {
     decorator1,
     decorator2,
     decorator3,
+    decorator4,
     heroimage,
     homebg1,
     homebg2,
