@@ -6,7 +6,7 @@ import { breakpoints } from "../theme"
 export const Wrapper = styled.section`
     padding: 1em 6em;
     background-color: ${(props) => props.bgColor ? `var(--${props.bgColor})` : 'none'};
-    transition: all .5s ease;
+    transition: all .3s ease;
 
     ${(props) => props.navbar && (`
         position: sticky;
@@ -84,7 +84,12 @@ export const ButtonIconed = styled(motion.button)`
         margin-right: 5px;
     }
 
-    background: ${(props) => props.bg ? `var(--${props.bg}); border: none;` : 'none'};
+    background: ${(props) => props.bg ? `
+        var(--${props.bg});
+        border: none;
+    ` : `
+        none
+    `};
     box-shadow: ${(props) => props.shadow === 1 && '0px 30px 30px rgba(99, 122, 166, 0.1)'};
     box-shadow: ${(props) => props.shadow === 2 && '0px 10px 30px -10px rgba(0, 0, 0, 0.5)'};
     border-radius: ${(props) => props.radius ? `${props.radius}px` : '10px'};
@@ -122,6 +127,30 @@ export const ClientCard = styled.div`
             font-size: 14px;
             font-weight: 500;
             color: var(--black02);
+        }
+    }
+`
+
+export const SectionHeader = styled.div`
+    text-align: center;
+    margin-top: 100px;
+
+    h2 {
+        font-size: 65px;
+        font-weight: 600;
+        letter-spacing: -0.06em;
+        color: var(--black01);
+        margin-bottom: 40px;
+        position: relative;
+        
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            margin-left: 80px;
+            width: 15%;
+            text-align: center;
+            border-bottom: 2px solid var(--orange);
         }
     }
 `

@@ -20,6 +20,7 @@ import logo_microsoft from '@/assets/logo-microsoft.svg'
 import services1 from '@/assets/services-1.png'
 import services2 from '@/assets/services-2.png'
 import services3 from '@/assets/services-3.png'
+import services4 from '@/assets/services-4.png'
 
 
 export default {
@@ -44,5 +45,6 @@ export default {
     logo_microsoft,
     services1,
     services2,
-    services3
+    services3,
+    services4
 }

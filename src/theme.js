@@ -29,6 +29,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: #f6f6f6;
         background-image: url(${images.homebg2});
         background-position: top left;
+        background-repeat: no-repeat;
     }
     * {
         margin: 0;
