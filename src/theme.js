@@ -74,6 +74,6 @@ export const GlobalStyles = createGlobalStyle`
     }
     p.lead {
         font-size: 16px;
-        color: var(--gray);
+        color: var(--black02);
     }
 `

@@ -17,7 +17,7 @@ const Navigation = () => {
     const [sticky, setSticky] = useState(false)
 
     useEffect(() => {
-        if (pageYOffset > 620) return setSticky(true)
+        if (pageYOffset > 0) return setSticky(true)
         setSticky(false)
     }, [pageYOffset])
 

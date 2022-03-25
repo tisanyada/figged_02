@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { GlobalStyles } from './theme'
-import { Navigation, Header, Blog, About, Stats, Services, Testimonial, Contact, Footer } from '@/container/'
+import { Navigation, Home, Blog, About, Stats, Services, Testimonial, Contact, Footer } from '@/container/'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 			<GlobalStyles />
 
 			<Navigation />
-			<Header />
+			<Home />
 			<Services />
 			<About />
 			<Stats />

@@ -22,7 +22,7 @@ export const Nav = styled(motion.nav)`
         height: 100vh;
         /* width: 350px; */
         width: 0;
-        background-color: rgba(247, 132, 48, 0.4);
+        background-color: rgba(247, 132, 48, 0.6);
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1em 2em;
