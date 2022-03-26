@@ -22,7 +22,7 @@ export const Wrapper = styled.section`
         // backdrop-filter: blur(2px);
         padding: .5em 6em;
     `)};
-    ${(props)=> props.nopadding && `
+    ${(props) => props.nopadding && `
         padding: 1em 0;
     `}
 
@@ -46,11 +46,11 @@ export const Logo = styled.a`
 
 export const Button = styled(motion.button)`
     outline: none;
-    /* border: 0; */
     font-size: 16px;
     cursor: pointer;
 
     font-weight: ${(props) => props.fw && props.fw};
+    padding: ${(props) => props.type === 0 && '0'};
     padding: ${(props) => props.type === 1 && '19px 48px'};
     padding: ${(props) => props.type === 2 && '17px 48px'};
     padding: ${(props) => props.type === 3 && '27px 52px'};
@@ -60,8 +60,9 @@ export const Button = styled(motion.button)`
     background: ${(props) => props.bg ? `var(--${props.bg})` : 'none'};
     box-shadow: ${(props) => props.shadow === 1 && '0px 30px 30px rgba(99, 122, 166, 0.1)'};
     box-shadow: ${(props) => props.shadow === 2 && '0px 10px 30px -10px rgba(0, 0, 0, 0.5)'};
+    text-decoration: ${(props) => props.textdecor === 'underline' && 'underline'};
     border-radius: ${(props) => props.radius ? `${props.radius}px` : '10px'};
-    border: ${(props)=> props.border ? `
+    border: ${(props) => props.border ? `
         border: ${props.border}px solid ${props.color};
     `: `
         none;
