@@ -22,6 +22,9 @@ export const Wrapper = styled.section`
         // backdrop-filter: blur(2px);
         padding: .5em 6em;
     `)};
+    ${(props)=> props.nopadding && `
+        padding: 1em 0;
+    `}
 
     @media ${breakpoints.lg} {
         padding: 1em 3.5em;
