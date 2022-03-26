@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import styled from "styled-components"
+import { breakpoints } from "@/theme"
 
-import { breakpoints } from "../theme"
 
 export const Wrapper = styled.section`
     padding: 1em 6em;
@@ -17,9 +17,10 @@ export const Wrapper = styled.section`
         padding: 1.2em 6em;
     `)}
     ${(props) => props.sticky && (`
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(2px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-        background-color: rgba(255, 255, 255, 0.8);
-        // backdrop-filter: blur(2px);
+        // background-color: rgba(247, 132, 48, 1);
         padding: .5em 6em;
     `)};
     ${(props) => props.nopadding && `
@@ -27,12 +28,12 @@ export const Wrapper = styled.section`
     `}
 
     @media ${breakpoints.lg} {
-        padding: 1em 3.5em;
+        padding: 1em 3em;
     }
     @media ${breakpoints.md} {
         padding: 1em 2em;
     }
-    @media ${breakpoints.sm} {
+    @media ${breakpoints.smb} {
         padding: 1em;
     }
 `
@@ -72,7 +73,17 @@ export const Button = styled(motion.button)`
         position: absolute;
         right: 10px;
         top: 30px;
+
+        @media screen and (max-width: 1300px) {
+            top: 35px;
+        }
     `};
+
+    @media ${breakpoints.lg} {
+        font-size: 14px;
+        padding: ${(props) => props.type === 1 && '15px 20px'};
+        padding: ${(props) => props.type === 3 && '15px 20px'};
+    }
 `
 
 export const ButtonIconed = styled(motion.button)`
@@ -87,12 +98,8 @@ export const ButtonIconed = styled(motion.button)`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* z-index: 2; */
-
-    img {
-        margin-right: 5px;
-    }
-
+    width: 90%;
+    
     background: ${(props) => props.bg ? `
         var(--${props.bg});
         border: none;
@@ -102,6 +109,10 @@ export const ButtonIconed = styled(motion.button)`
     box-shadow: ${(props) => props.shadow === 1 && '0px 30px 30px rgba(99, 122, 166, 0.1)'};
     box-shadow: ${(props) => props.shadow === 2 && '0px 10px 30px -10px rgba(0, 0, 0, 0.5)'};
     border-radius: ${(props) => props.radius ? `${props.radius}px` : '10px'};
+   
+    img {
+        margin-right: 5px;
+    }
 `
 
 export const ClientCard = styled.div`
@@ -142,17 +153,95 @@ export const ClientCard = styled.div`
     
     ${(props) => props.type === 1 && `
         bottom: 80px;
-        right: -50px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px);
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.08);
+
+        img.avatar-1 {
+            width: 60px;
+            border-radius: 50%;
+            border: 2px solid #DEDEDE;
+            margin-right: 10px;
+        }
+
+        @media ${breakpoints.lg} {
+            bottom: 40px;
+            right: -20px
+        }
+        @media ${breakpoints.xmd} {
+            bottom: 20px;
+            right: -20px;
+            width: 350px;
+
+            p {
+                font-size: 14px;
+                color: red;
+            }
+        }
+        @media ${breakpoints.md} {
+            left: 150px;
+            bottom: 300px;
+        }
+        @media ${breakpoints.mb} {
+            left: 30px;
+            bottom: 50px;
+            width: 320px;
+        }
+        @media ${breakpoints.smb} {
+            left: -5px;
+            bottom: 10px;
+        }
     `}
     ${(props) => props.type === 2 && `
         bottom: 80px;
-        right: -50px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px);
         box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.08);
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        @media ${breakpoints.lg} {
+            left: 80px;
+        }
+        @media ${breakpoints.xmd} {
+            left: 30px;
+            width: 350px;
+
+            p {
+                font-size: 14px;
+                color: red;
+            }
+        }
+        @media ${breakpoints.md} {
+            display: none;
+        }
+        @media screen and (max-width: 1300px) {
+            right: -20px;
+        }
     `}
     ${(props) => props.type === 3 && `
         bottom: -80px;
         left: -200px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px);
         box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.08);
+        transition: .5s ease;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        @media ${breakpoints.lg} {
+            left: -50px;
+        }
+        @media ${breakpoints.md} {
+            display: none;
+        }
     `}
 `
 
@@ -176,6 +265,12 @@ export const SectionHeader = styled.div`
             width: 15%;
             text-align: center;
             border-bottom: 2px solid var(--orange);
+        }
+    }
+
+    @media ${breakpoints.mb} {
+        h2 {
+            font-size: 50px;
         }
     }
 `

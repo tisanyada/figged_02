@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { breakpoints } from "@/theme"
 
 export const ServicesContainer = styled.div`
     display: grid;
@@ -7,6 +7,12 @@ export const ServicesContainer = styled.div`
     row-gap: 40px;
     column-gap: 30px;
     padding: 80px;
+
+    @media ${breakpoints.mb} {
+        column-gap: 0;
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 `
 export const Serviceitem = styled.div`
     display: flex;
@@ -39,5 +45,9 @@ export const Serviceitem = styled.div`
         font-size: 14px;
         color: var(--black02);
         
+    }
+
+    @media ${breakpoints.mb} {
+        margin: 0 auto;
     }
 `

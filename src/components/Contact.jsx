@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { breakpoints } from "@/theme";
 
 
 export const ContactContainer = styled.div`
@@ -6,7 +7,7 @@ export const ContactContainer = styled.div`
     background-color: var(--orange);
     margin: 100px auto 0;
     text-align: center;
-    padding: 40px 200px;
+    padding: 20px 200px;
     
     h4 {
         font-size: 48px;
@@ -16,5 +17,13 @@ export const ContactContainer = styled.div`
     p.lead {
         color: var(--white);
         margin: 20px auto;
+    }
+
+    @media screen and (max-width: 1300px){
+        width: 100%;
+        padding: 20px 50px;
+    }
+    @media ${breakpoints.mb} {
+        padding: 20px;
     }
 `

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { breakpoints } from "@/theme"
 
 
 export const FooterContainer = styled.div`
@@ -7,6 +8,15 @@ export const FooterContainer = styled.div`
     justify-content: space-between;
     gap: 5rem;
     margin-top: 100px;
+
+    @media ${breakpoints.md} {
+        gap: 2em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media ${breakpoints.mb} {
+        gap: 2em;
+        grid-template-columns: repeat(2, 1fr);
+    }
 `
 
 export const FooterCol = styled.div`
@@ -49,6 +59,15 @@ export const FooterCol = styled.div`
                     color: var(--white);
                 }
             }
+        }
+    }
+
+    @media ${breakpoints.md} {
+        margin-bottom: 5px;
+    }
+    @media ${breakpoints.mb} {
+        .socials {
+            justify-content: space-between;
         }
     }
 `

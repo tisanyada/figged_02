@@ -64,7 +64,7 @@ const Home = () => {
 					<img src={images.heroimage} />
 
 					<ClientCard type={1}>
-						<img src={images.avatar1} />
+						<img src={images.avatar1} className="avatar-1"/>
 						<div className="text">
 							<p className="lead">Wisdom new valley answer. Contended it so is discourse recomment Man it upon him call mile.</p>
 							<small>Sameer - CEO @airbnb</small>

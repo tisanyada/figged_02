@@ -2,9 +2,12 @@ import { createGlobalStyle } from "styled-components"
 import { images } from "./constants"
 
 export const breakpoints = {
-    sm: 'screen and (max-width: 480px)',
-    md: 'screen and (max-width: 769px)',
+    smb: 'screen and (max-width: 400px)',
+    mb: 'screen and (max-width: 550px)',
+    md: 'screen and (max-width: 880px)',
+    xmd: 'screen and (max-width: 910px)',
     lg: 'screen and (max-width: 1100px)',
+    xlg: 'screen and (max-width: 1300px)',
 }
 
 export const GlobalStyles = createGlobalStyle`

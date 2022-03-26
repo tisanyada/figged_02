@@ -9,7 +9,7 @@ import { NavLink } from "@/components/Navigation"
 
 const Footer = () => {
 	const [activeLink, setActiveLink] = useState("")
-	console.log(activeLink);
+
 	return (
 		<Fragment>
 			<Wrapper>

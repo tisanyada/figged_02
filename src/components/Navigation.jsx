@@ -19,18 +19,22 @@ export const Nav = styled(motion.nav)`
         flex-direction: column;
         top: 0;
         right: -96px;
-        height: 100vh;
-        /* width: 350px; */
+        right: 0;
         width: 0;
-        background-color: rgba(247, 132, 48, 0.6);
+        height: max-content;
+        border-bottom-left-radius: 40px;
+        /* background-color: rgba(247, 132, 48, 0.7); */
+        background-color: rgba(255, 255, 255, 0.8);
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1em 2em;
-        transition: width .8s ease-in-out;
-        box-shadow: -30px 0px 40px -10px rgba(247, 132, 48, 0.3);
-        backdrop-filter: blur(5px);
+        transition: display .8s ease, width .8s ease-in-out, right .8s ease;
+        box-shadow: -30px 0px 40px -10px rgba(0, 0, 0, 0.1);
+        display: none;
         &.active {
-            width: 350px;
+            display: flex;
+            width: 250px;
+            right: 0;
         }
     }
 `
@@ -49,6 +53,7 @@ export const NavLink = styled.a`
 
     @media ${breakpoints.lg} {
         color: white;
+        color: var(--black01);
         margin-right: 0;
         margin-bottom: 35px;
         &.active {
@@ -71,6 +76,7 @@ export const NavCloseButton = styled(motion.button)`
     @media ${breakpoints.lg} {
         display: block;
         color: white;
+        color: var(--black01);
         margin: 10px 0 40px 145px;
     }
 `

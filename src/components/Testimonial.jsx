@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { breakpoints } from '@/theme'
 
 
 export const TestimonialContainer = styled.div`
@@ -7,6 +8,13 @@ export const TestimonialContainer = styled.div`
     height: 350px;
     background: var(--orange);
     position: relative;
+
+    @media ${breakpoints.md} {
+        weight: 50%;
+    }
+    @media ${breakpoints.md} {
+        background: rgba(255, 255, 255, 0);
+    }
 `
 
 export const TestimonialItem = styled.div`
@@ -37,6 +45,33 @@ export const TestimonialItem = styled.div`
     .stars {
         color: #ffb905;
     }
+
+
+    @media screen and (max-width: 1300px) {
+        width: 700px;
+        padding: 20px 100px;
+    }
+    @media ${breakpoints.md} {
+        width: 500px;
+
+        h6 {
+            font-size: 18px;
+        }
+        p, h4{
+            font-size: 14px;
+        }
+        p.lead{
+            font-size: 14px;
+            margin: 10px auto;
+        }
+        padding: 10px 20px;
+    }
+    @media ${breakpoints.mb} {
+        width: 300px;
+        p.lead {
+            line-height: 1.6;
+        }
+    }
 `
 
 export const SlideButtons = styled.div`
@@ -60,5 +95,57 @@ export const SlideButtons = styled.div`
     .radio.active {
         background: rgba(255, 255, 255, 0.2);
         border: 2px solid white;
+    }
+
+    @media ${breakpoints.xlg} {
+        /* bottom: 0; */
+        margin: 0;
+        top: 80px;
+        left: 60px;
+        height: 30%;
+        flex-direction: column;
+        .radio {
+            background-color: var(--white);
+            width: 20px;
+            height: 20px;
+        }
+        .radio.active {
+            border: 2px solid var(--white);
+        }
+    }
+    @media ${breakpoints.lg} {
+        left: 10px;
+    }
+    @media ${breakpoints.md} {
+        bottom: 80px;
+        left: -40px;
+        width: 20%;
+        .radio {
+            background-color: var(--orange);
+            width: 20px;
+            height: 20px;
+        }
+        .radio.active {
+            border: 2px solid var(--orange);
+        }
+    }
+    @media ${breakpoints.xmd} {
+        margin: 180px auto 0;
+        flex-direction: row;
+         
+        .radio {
+            background-color: var(--orange);
+            width: 20px;
+            height: 20px;
+        }
+        .radio.active {
+            border: 2px solid var(--orange);
+        }
+        bottom: -60px;
+    }
+    @media ${breakpoints.mb} {
+        margin: 280px auto;
+        left: 0;
+        width: 30%;
     }
 `
