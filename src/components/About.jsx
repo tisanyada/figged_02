@@ -39,7 +39,7 @@ export const AboutLeftCol = styled.div`
             margin: 20px auto;
         }
 
-        h4{
+        h4 {
             font-weight: 600;
             letter-spacing: -1.5px;
             position: relative;
@@ -79,6 +79,7 @@ export const AboutLeftCol = styled.div`
     @media ${breakpoints.mb} {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        
         .process {
             margin: 20px;
         }

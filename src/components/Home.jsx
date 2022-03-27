@@ -26,6 +26,7 @@ export const HomeLeftCol = styled.div`
         letter-spacing: -5px;
         font-weight: 450;
         line-height: 1;
+
         span{
             font-weight: 800;
             color: var(--orange);
@@ -54,6 +55,7 @@ export const HomeLeftCol = styled.div`
             font-size: 40px;
             letter-spacing: 0;
         }
+
         h1, span {
             font-weight: 700;
         }
@@ -72,18 +74,18 @@ export const HomeRightCol = styled(motion.div)`
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
             width: 80%;
         }
     }
-    @media ${breakpoints.md} {
- 
-    }
 `
+
 export const InputGroup = styled.div`
     position: relative;
     width: 100%;
 `
+
 export const SearchInput = styled.input`
     outline: none;
     border: none;
@@ -104,7 +106,7 @@ export const SearchInput = styled.input`
         font-weight: 600;
     }
 
-    @media screen and (max-width: 1300px) {
+    @media ${breakpoints.xlg} {
         padding-right: 150px;
     }
     @media ${breakpoints.mb} {

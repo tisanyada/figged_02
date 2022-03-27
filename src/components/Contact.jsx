@@ -20,7 +20,7 @@ export const ContactContainer = styled(motion.div)`
         margin: 20px auto;
     }
 
-    @media screen and (max-width: 1300px){
+    @media ${breakpoints.xlg} {
         width: 100%;
         padding: 20px 50px;
     }

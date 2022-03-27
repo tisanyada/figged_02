@@ -24,10 +24,11 @@ export const Nav = styled(motion.nav)`
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1em 2em;
-        transition: display .8s ease, width .8s ease-in-out, right .8s ease;
+        transition: all 0.8s ease;
         box-shadow: -30px 0px 40px -10px rgba(0, 0, 0, 0.1);
         display: none;
         backdrop-filter: blur(10px);
+        
         &.active {
             display: flex;
             width: 250px;
@@ -40,7 +41,7 @@ export const NavLink = styled.a`
     font-size: 16px;
     cursor: pointer;
     font-weight: 450;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 
     &.active {
         color: var(--black02);
@@ -52,6 +53,7 @@ export const NavLink = styled.a`
         color: var(--black01);
         margin-right: 0;
         margin-bottom: 35px;
+
         &.active {
             color: rgba(255, 255, 255, 0.4);
             font-size: 20px;
@@ -71,7 +73,6 @@ export const NavCloseButton = styled(motion.button)`
 
     @media ${breakpoints.lg} {
         display: block;
-        color: white;
         color: var(--black01);
         margin: 10px 0 40px 145px;
     }
@@ -99,8 +100,6 @@ export const NavAuthButtons = styled.div`
 
     @media ${breakpoints.lg} {
         flex-direction: column;
-        /* width: 100%; */
-
         border-top: 2px solid var(--black01);
         
         button {

@@ -4,7 +4,6 @@ import { breakpoints } from "@/theme"
 
 export const BlogContainer = styled.div`
     width: 80%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +40,6 @@ export const BlogItemTag = styled(motion.p)`
     position: absolute;
     top: 0;
     right: 20px;
-
     font-size: 16px;
     font-weight: 600;
     padding: 20px;
@@ -55,7 +53,6 @@ export const BlogItemContent = styled(motion.div)`
     left: 0;
     right: 0;
     bottom: 25px;
-
     margin: 0 auto;
     width: 420px;
     height: 230px;
@@ -69,6 +66,17 @@ export const BlogItemContent = styled(motion.div)`
         margin: 5px auto;
     }
 
+    @media ${breakpoints.xlg} {
+        width: 300px;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p.lead {
+            font-size: 14px;
+        }
+    }
     @media ${breakpoints.xmd} {
         bottom: 20px;
         width: 450px !important;
@@ -95,24 +103,14 @@ export const BlogItemContent = styled(motion.div)`
         justify-content: center;
         height: 180px;
         width: 95% !important;
+
         h4 {
             font-size: 14px !important;
         }
-        
+
         p.lead {
             margin: 10px auto;
             font-size: 8px;
-        }
-    }
-    @media screen and (max-width: 1300px) {
-        width: 300px;
-
-        h4 {
-            font-size: 20px;
-        }
-
-        p.lead {
-            font-size: 14px;
         }
     }
 `

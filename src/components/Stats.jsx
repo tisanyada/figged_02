@@ -53,7 +53,6 @@ export const StatsLeftCol = styled.div`
             font-size: 30px;
         }
     }
-
     @media ${breakpoints.md} {
         width: 100%;
     }
@@ -75,7 +74,6 @@ export const StatsRightCol = styled.div`
             box-shadow: 50px 50px 0px -10px var(--orange);
         }
     }
-    
     @media ${breakpoints.md} {
         width: 100%;
         align-items: center;

@@ -15,6 +15,7 @@ export const ServicesContainer = styled.div`
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 `
+
 export const Serviceitem = styled(motion.div)`
     display: flex;
     flex-direction: column;
@@ -42,10 +43,9 @@ export const Serviceitem = styled(motion.div)`
         margin: 30px auto;
     }
     
-    p{
+    p {
         font-size: 14px;
-        color: var(--black02);
-        
+        color: var(--black02);  
     }
 
     @media ${breakpoints.mb} {

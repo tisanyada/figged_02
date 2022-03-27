@@ -12,8 +12,6 @@ export const TestimonialContainer = styled.div`
 
     @media ${breakpoints.md} {
         weight: 50%;
-    }
-    @media ${breakpoints.md} {
         background: rgba(255, 255, 255, 0);
     }
 `
@@ -23,19 +21,16 @@ export const TestimonialItem = styled(motion.div)`
     left: 0;
     top: -100px;
     right: 0;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background: white;
     width: 800px;
     margin: 0 auto;
     border-radius: 10px;
     text-align: center;
     padding: 10px;
-
 
     h6 {
         font-size: 16px;
@@ -48,12 +43,13 @@ export const TestimonialItem = styled(motion.div)`
     }
 
 
-    @media screen and (max-width: 1300px) {
+    @media ${breakpoints.xlg} {
         width: 700px;
         padding: 20px 100px;
     }
     @media ${breakpoints.md} {
         width: 500px;
+        padding: 10px 20px;
 
         h6 {
             font-size: 18px;
@@ -65,10 +61,10 @@ export const TestimonialItem = styled(motion.div)`
             font-size: 14px;
             margin: 10px auto;
         }
-        padding: 10px 20px;
     }
     @media ${breakpoints.mb} {
         width: 300px;
+
         p.lead {
             line-height: 1.6;
         }
@@ -99,12 +95,12 @@ export const SlideButtons = styled.div`
     }
 
     @media ${breakpoints.xlg} {
-        /* bottom: 0; */
         margin: 0;
         top: 80px;
         left: 60px;
         height: 30%;
         flex-direction: column;
+
         .radio {
             background-color: var(--white);
             width: 20px;
@@ -121,6 +117,7 @@ export const SlideButtons = styled.div`
         bottom: 80px;
         left: -40px;
         width: 20%;
+        
         .radio {
             background-color: var(--orange);
             width: 20px;

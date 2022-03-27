@@ -6,7 +6,7 @@ import { breakpoints } from "@/theme"
 export const Wrapper = styled.section`
     padding: 1em 6em;
     background-color: ${(props) => props.bgColor ? `var(--${props.bgColor})` : 'none'};
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     ${(props) => props.navbar && (`
         position: sticky;
@@ -20,8 +20,7 @@ export const Wrapper = styled.section`
         background-color: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(2px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-        // background-color: rgba(247, 132, 48, 1);
-        padding: .5em 6em;
+        padding: 0.5em 6em;
     `)};
     ${(props) => props.nopadding && `
         padding: 1em 0;
@@ -94,7 +93,7 @@ export const ButtonIconed = styled(motion.button)`
     font-weight: 800;
     padding: 27px 53px;
     color: rgba(0, 0, 0, 0.4);
-    border: 2px solid #DEDEDE;
+    border: 2px solid #dedede;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,12 +127,14 @@ export const ClientCard = styled(motion.div)`
 
     .avatar {
         text-align: center;
+       
         img {
             width: 80px;
             border-radius: 50%;
-            border: 2px solid #DEDEDE;
+            border: 2px solid #dedede;
             margin-right: 10px;
         }
+       
         .stars {
             margin-top: 25px;
             color: #ffb905;
@@ -161,7 +162,7 @@ export const ClientCard = styled(motion.div)`
         img.avatar-1 {
             width: 60px;
             border-radius: 50%;
-            border: 2px solid #DEDEDE;
+            border: 2px solid #dedede;
             margin-right: 10px;
         }
 
@@ -209,12 +210,15 @@ export const ClientCard = styled(motion.div)`
         background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(5px);
         box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.08);
-        transition: .5s ease;
+        transition: 0.5s ease;
 
         &:hover {
             background-color: rgba(255, 255, 255, 0.8);
         }
         
+        @media ${breakpoints.xlg} {
+            right: -20px;
+        }
         @media ${breakpoints.lg} {
             left: 80px;
         }
@@ -230,9 +234,6 @@ export const ClientCard = styled(motion.div)`
         @media ${breakpoints.md} {
             display: none;
         }
-        @media screen and (max-width: 1300px) {
-            right: -20px;
-        }
     `}
     ${(props) => props.type === 3 && `
         bottom: -80px;
@@ -240,7 +241,7 @@ export const ClientCard = styled(motion.div)`
         background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(5px);
         box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.08);
-        transition: .5s ease;
+        transition: 0.5s ease;
         
         &:hover {
             background-color: rgba(255, 255, 255, 0.9);

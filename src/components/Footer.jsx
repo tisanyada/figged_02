@@ -10,11 +10,9 @@ export const FooterContainer = styled.div`
     margin-top: 100px;
 
     @media ${breakpoints.md} {
-        gap: 2em;
         grid-template-columns: repeat(3, 1fr);
     }
     @media ${breakpoints.mb} {
-        gap: 2em;
         grid-template-columns: repeat(2, 1fr);
     }
 `
@@ -35,6 +33,7 @@ export const FooterCol = styled.div`
     p.lead {
         margin: 20px 0;
     }
+
     .socials {
         display: flex;
         justify-content: flex-start;
@@ -54,6 +53,7 @@ export const FooterCol = styled.div`
             
             &.active {
                 background: var(--black01);
+                
                 svg {
                     transition: .8s ease;
                     color: var(--white);
