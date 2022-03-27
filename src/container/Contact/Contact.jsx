@@ -6,7 +6,10 @@ import { Button, Wrapper } from "@/components/Utils"
 const Contact = () => {
 	return (
 		<Wrapper id="contact">
-			<ContactContainer >
+			<ContactContainer
+				whileInView={{ scale: [0.9, 1] }}
+				transition={{ duration: 0.6 }}
+			>
 				<h4>Get your updated news</h4>
 				<p className="lead">If you are going to use a passage from Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
 

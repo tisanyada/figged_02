@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { AiFillStar } from "react-icons/ai"
 
 import { StatsContainer, StatsLeftCol, StatsRightCol } from "@/components/Stats"
@@ -15,28 +16,47 @@ const Stats = () => {
 
             <StatsContainer>
                 <StatsLeftCol>
-                    <div className="item">
+                    <motion.div
+                        className="item"
+                        whileInView={{ y: [40, 1] }}
+                        transition={{ duration: 0.8 }}
+                    >
                         <h3>1500+</h3>
                         <p className="lead">Projects <br /> Done</p>
-                    </div>
-                    <div className="item">
+                    </motion.div>
+                    <motion.div
+                        className="item"
+                        whileInView={{ y: [40, 1] }}
+                        transition={{ duration: 0.8 }}
+                    >
                         <h3>2000+</h3>
                         <p className="lead">Happy <br /> Customers</p>
-                    </div>
-                    <div className="item">
+                    </motion.div>
+                    <motion.div
+                        className="item"
+                        whileInView={{ y: [40, 1] }}
+                        transition={{ duration: 0.8 }}
+                    >
                         <h3>3000+</h3>
                         <p className="lead">Cup of <br /> Coffee</p>
-                    </div>
-                    <div className="item">
+                    </motion.div>
+                    <motion.div
+                        className="item"
+                        whileInView={{ y: [40, 1] }}
+                        transition={{ duration: 0.8 }}
+                    >
                         <h3>1890+</h3>
                         <p className="lead">Projects in<br /> Queue</p>
-                    </div>
+                    </motion.div>
                 </StatsLeftCol>
 
                 <StatsRightCol>
                     <img src={images.client} className="main" />
 
-                    <ClientCard type={2}>
+                    <ClientCard type={2}
+                        whileInView={{ x: [-80, 1] }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <div className="avatar">
                             <img src={images.avatar2} />
                             <div className="stars">
@@ -52,7 +72,10 @@ const Stats = () => {
                             <small>Linda, Project Manager</small>
                         </div>
                     </ClientCard>
-                    <ClientCard type={3}>
+                    <ClientCard type={3}
+                        whileInView={{ x: [60, 1] }}
+                        transition={{ duration: 0.8 }}
+                    >
                         <div className="avatar">
                             <img src={images.avatar3} />
                             <div className="stars">

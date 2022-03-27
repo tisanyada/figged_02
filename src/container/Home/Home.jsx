@@ -30,6 +30,9 @@ const Home = () => {
 							type={1}
 							shadow={1}
 							radius={50}
+
+							whileInView={{ scale: [0.8, 1, 0.9, 1] }}
+							transition={{ duration: 0.8 }}
 						>
 							<img src={images.logo_airbnb} /> airbnb
 						</ButtonIconed>
@@ -38,6 +41,9 @@ const Home = () => {
 							type={1}
 							shadow={1}
 							radius={50}
+
+							whileInView={{ scale: [0.8, 1, 0.9, 1] }}
+							transition={{ duration: 0.8 }}
 						>
 							<img src={images.logo_dropbox} /> Dropbox
 						</ButtonIconed>
@@ -46,6 +52,9 @@ const Home = () => {
 							type={1}
 							shadow={1}
 							radius={50}
+
+							whileInView={{ scale: [0.8, 1, 0.9, 1] }}
+							transition={{ duration: 0.8 }}
 						>
 							<img src={images.logo_microsoft} /> Microsoft
 						</ButtonIconed>
@@ -54,17 +63,23 @@ const Home = () => {
 							type={1}
 							shadow={1}
 							radius={50}
+
+							whileInView={{ scale: [0.8, 1, 0.9, 1] }}
+							transition={{ duration: 0.8 }}
 						>
 							Stripe
 						</ButtonIconed>
 					</ButtonGroup>
 				</HomeLeftCol>
 
-				<HomeRightCol>
+				<HomeRightCol
+					whileInView={{ opacity: [0.5, 1], scale: [0.8, 1] }}
+					transition={{ duration: 1.5 }}
+				>
 					<img src={images.heroimage} />
 
 					<ClientCard type={1}>
-						<img src={images.avatar1} className="avatar-1"/>
+						<img src={images.avatar1} className="avatar-1" />
 						<div className="text">
 							<p className="lead">Wisdom new valley answer. Contended it so is discourse recomment Man it upon him call mile.</p>
 							<small>Sameer - CEO @airbnb</small>

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import styled from "styled-components"
-import { images } from "../constants"
 import { breakpoints } from "../theme"
 
 export const NavigationContainer = styled.div`
@@ -18,23 +17,20 @@ export const Nav = styled(motion.nav)`
         position: fixed;
         flex-direction: column;
         top: 0;
-        right: -96px;
         right: 0;
-        width: 0;
         height: max-content;
         border-bottom-left-radius: 40px;
-        /* background-color: rgba(247, 132, 48, 0.7); */
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.95);
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1em 2em;
         transition: display .8s ease, width .8s ease-in-out, right .8s ease;
         box-shadow: -30px 0px 40px -10px rgba(0, 0, 0, 0.1);
         display: none;
+        backdrop-filter: blur(10px);
         &.active {
             display: flex;
             width: 250px;
-            right: 0;
         }
     }
 `
@@ -105,7 +101,7 @@ export const NavAuthButtons = styled.div`
         flex-direction: column;
         /* width: 100%; */
 
-        border-top: 2px solid white;
+        border-top: 2px solid var(--black01);
         
         button {
             margin: 20px 0;
@@ -114,9 +110,4 @@ export const NavAuthButtons = styled.div`
             }
         }
     }
-`
-export const NavBg = styled(motion.img)`
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
 `

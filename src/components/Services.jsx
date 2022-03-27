@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { breakpoints } from "@/theme"
+import { motion } from "framer-motion"
 
 export const ServicesContainer = styled.div`
     display: grid;
@@ -14,7 +15,7 @@ export const ServicesContainer = styled.div`
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 `
-export const Serviceitem = styled.div`
+export const Serviceitem = styled(motion.div)`
     display: flex;
     flex-direction: column;
     align-items: center;

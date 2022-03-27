@@ -6,7 +6,7 @@ export const FooterContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    gap: 5rem;
+    gap: 2rem;
     margin-top: 100px;
 
     @media ${breakpoints.md} {

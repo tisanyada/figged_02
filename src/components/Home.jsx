@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { breakpoints } from "@/theme"
+import { motion } from "framer-motion"
 
 
 export const HomeContainer = styled.div`
@@ -10,19 +11,8 @@ export const HomeContainer = styled.div`
 
     @media ${breakpoints.md} {
         flex-direction: column-reverse;
-        /* margin-top: 550px; */
         height: auto;
     }
-    /* @media ${breakpoints.mb} {
-        margin-top: 450px;
-    }
-    @media ${breakpoints.smb} {
-        margin-top: 380px;
-    } */
-
-    /* @media screen and (max-width: 360px) {
-        margin-top: -200px;
-    } */
 `
 
 export const HomeLeftCol = styled.div`
@@ -70,7 +60,7 @@ export const HomeLeftCol = styled.div`
     }
 `
 
-export const HomeRightCol = styled.div`
+export const HomeRightCol = styled(motion.div)`
     width: 100%;
     position: relative;
     

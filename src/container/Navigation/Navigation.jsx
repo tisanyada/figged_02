@@ -4,9 +4,8 @@ import { AiOutlineMenuFold } from 'react-icons/ai'
 import { IoClose } from 'react-icons/io5'
 
 
-import { Nav, NavAuthButtons, NavBg, NavCloseButton, NavigationContainer, NavLink, NavMenuButton } from "@/components/Navigation"
+import { Nav, NavAuthButtons, NavCloseButton, NavigationContainer, NavLink, NavMenuButton } from "@/components/Navigation"
 import { Button, Logo, Wrapper } from "@/components/Utils"
-import images from "@/constants/images"
 
 
 const Navigation = () => {
@@ -33,9 +32,9 @@ const Navigation = () => {
                     Digi.Business
                 </Logo>
 
-                <NavMenuButton onClick={() => setShowMenu(!showMenu)}>
+                {!showMenu && <NavMenuButton onClick={() => setShowMenu(!showMenu)}>
                     <AiOutlineMenuFold size={24} />
-                </NavMenuButton>
+                </NavMenuButton>}
 
                 <Nav className={showMenu && 'active'}>
                     <NavCloseButton onClick={() => setShowMenu(!showMenu)}>
@@ -52,7 +51,7 @@ const Navigation = () => {
 
                     <NavAuthButtons>
                         <Button
-                            // fw={500}
+                            id="login"
                             color="black01"
                         >Login</Button>
                         <Button
@@ -68,8 +67,6 @@ const Navigation = () => {
                         >Sign up</Button>
                     </NavAuthButtons>
                 </Nav>
-
-                {/* <NavBg src={images.homebg2}/> */}
             </NavigationContainer>
         </Wrapper>
     )

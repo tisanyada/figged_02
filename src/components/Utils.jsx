@@ -115,7 +115,7 @@ export const ButtonIconed = styled(motion.button)`
     }
 `
 
-export const ClientCard = styled.div`
+export const ClientCard = styled(motion.div)`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -176,7 +176,6 @@ export const ClientCard = styled.div`
 
             p {
                 font-size: 14px;
-                color: red;
             }
         }
         @media ${breakpoints.md} {
@@ -186,7 +185,18 @@ export const ClientCard = styled.div`
         @media ${breakpoints.mb} {
             left: 30px;
             bottom: 50px;
-            width: 320px;
+            width: 300px;
+
+            img.avatar-1 {
+                width: 40px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+            .text small {
+                font-size: 10px;
+            }
         }
         @media ${breakpoints.smb} {
             left: -5px;

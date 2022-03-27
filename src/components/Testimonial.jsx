@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { breakpoints } from '@/theme'
+import { motion } from "framer-motion"
 
 
 export const TestimonialContainer = styled.div`
@@ -17,7 +18,7 @@ export const TestimonialContainer = styled.div`
     }
 `
 
-export const TestimonialItem = styled.div`
+export const TestimonialItem = styled(motion.div)`
     position: absolute;
     left: 0;
     top: -100px;

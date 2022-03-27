@@ -21,7 +21,6 @@ export const StatsLeftCol = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* flex-direction: column; */
 
     .item {
         width: 40%;

@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import { breakpoints } from "@/theme";
+import { motion } from "framer-motion";
 
 
-export const ContactContainer = styled.div`
+export const ContactContainer = styled(motion.div)`
     width: 85%;
     background-color: var(--orange);
     margin: 100px auto 0;

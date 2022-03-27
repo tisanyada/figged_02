@@ -83,6 +83,7 @@ export const AboutLeftCol = styled.div`
             margin: 20px;
         }
         .process h4 {
+            text-align: center;
             font-size: 18px;
         }
     }

@@ -17,7 +17,10 @@ const Blog = () => {
 
 					<BlogItemTag>NEW</BlogItemTag>
 
-					<BlogItemContent>
+					<BlogItemContent
+						whileInView={{ y: [-20, 1], opacity: [0.3, 1] }}
+						transition={{ duration: 1.2 }}
+					>
 						<h4>Distrusts fulfilled happiness unwilling as explained to difficult.</h4>
 						<p className="lead">Spot to many it four bred soon well to. Or am promotion in no departure abilities. Whatever landlord yourself at by pleasure of children be.</p>
 
@@ -35,7 +38,10 @@ const Blog = () => {
 
 					<BlogItemTag>NEW</BlogItemTag>
 
-					<BlogItemContent>
+					<BlogItemContent
+						whileInView={{ y: [-20, 1], opacity: [0.3, 1] }}
+						transition={{ duration: 1.2 }}
+					>
 						<h4>Distrusts fulfilled happiness unwilling as explained to difficult.</h4>
 						<p className="lead">Spot to many it four bred soon well to. Or am promotion in no departure abilities. Whatever landlord yourself at by pleasure of children be.</p>
 

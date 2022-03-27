@@ -2,6 +2,7 @@ import { AboutContainer, AboutLeftCol, AboutRightCol } from "@/components/About"
 import { ButtonGroup } from "@/components/Home"
 import { Button, SectionHeader, Wrapper } from "@/components/Utils"
 import images from "@/constants/images"
+import { motion } from "framer-motion"
 
 
 const About = () => {
@@ -14,30 +15,50 @@ const About = () => {
 
 			<AboutContainer>
 				<AboutLeftCol>
-					<div className="process">
+					<motion.div
+						className="process"
+						whileInView={{ y: [-40, 1] }}
+						transition={{ duration: 0.6 }}
+					>
 						<div className="avatar">
 							<img src={images.icons_user} />
 						</div>
 						<h4>Create Account</h4>
-					</div>
-					<div className="process">
+					</motion.div>
+
+					<motion.div
+						className="process"
+						whileInView={{ y: [-40, 1] }}
+						transition={{ duration: 0.6 }}
+					>
 						<div className="avatar">
 							<img src={images.icons_file} />
 						</div>
 						<h4>Upload Documents</h4>
-					</div>
-					<div className="process">
+					</motion.div>
+
+					<motion.div
+						className="process"
+						whileInView={{ y: [-40, 1] }}
+						transition={{ duration: 0.6 }}
+					>
 						<div className="avatar">
 							<img src={images.icons_search} />
 						</div>
 						<h4>Search Services</h4>
-					</div>
-					<div className="process">
+					</motion.div>
+
+					<motion.div
+						className="process"
+						whileInView={{ y: [-40, 1] }}
+						transition={{ duration: 0.6 }}
+					>
 						<div className="avatar">
 							<img src={images.icons_verify} />
 						</div>
 						<h4>Apply</h4>
-					</div>
+					</motion.div>
+
 				</AboutLeftCol>
 
 				<AboutRightCol>
@@ -58,6 +79,9 @@ const About = () => {
 							type={1}
 							shadow={2}
 							radius={50}
+
+							whileInView={{ scale: [0.8, 1] }}
+							transition={{ duration: 0.6 }}
 						>Create Account</Button>
 						<Button
 							color="black02"
@@ -66,6 +90,9 @@ const About = () => {
 							type={3}
 							shadow={2}
 							radius={50}
+
+							whileInView={{ scale: [0.8, 1] }}
+							transition={{ duration: 0.6 }}
 						>Learn More</Button>
 					</ButtonGroup>
 				</AboutRightCol>
