@@ -1,6 +1,5 @@
 import { ContactContainer } from "@/components/Contact"
-import { InputGroup, SearchInput } from "@/components/Home"
-import { Button, Wrapper } from "@/components/Utils"
+import { Button, InputGroup, SearchInput, Wrapper } from "@/components/Utils"
 
 
 const Contact = () => {

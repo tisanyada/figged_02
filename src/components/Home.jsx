@@ -11,6 +11,7 @@ export const HomeContainer = styled.div`
 
     @media ${breakpoints.md} {
         flex-direction: column-reverse;
+        flex-direction: column;
         height: auto;
     }
 `
@@ -81,40 +82,6 @@ export const HomeRightCol = styled(motion.div)`
     }
 `
 
-export const InputGroup = styled.div`
-    position: relative;
-    width: 100%;
-`
-
-export const SearchInput = styled.input`
-    outline: none;
-    border: none;
-    background: white;
-    width: 100%;
-    padding: 29px 240px 29px 45px;
-    box-shadow: 0px 30px 30px rgba(99, 122, 166, 0.1);
-    border-radius: 40px;
-    margin: 20px 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--black01);
-
-    &::placeholder {
-        font-size: 16px;
-        text-transform: uppercase;
-        color: var(--black02);
-        font-weight: 600;
-    }
-
-    @media ${breakpoints.xlg} {
-        padding-right: 150px;
-    }
-    @media ${breakpoints.mb} {
-        padding-right: 120px;
-        padding-left: 20px;
-    }
-`
-
 export const ButtonGroup = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -136,7 +103,7 @@ export const ButtonGroup = styled.div`
     @media ${breakpoints.mb} {
         grid-template-columns: 1fr;
         width: 80%;
-        margin-top: 40px;
+        /* margin-top: 40px; */
     }
     @media ${breakpoints.smb} {
         margin-top: 40px;

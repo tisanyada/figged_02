@@ -42,6 +42,11 @@ export const Logo = styled.a`
     font-weight: 700;
     letter-spacing: -0.06em;
     color: ${(props) => props.color ? props.color : 'var(--black01)'};
+
+    @media ${breakpoints.mb} {
+        font-size: 20px;
+        font-weight: 800;
+    }
 `
 
 export const Button = styled(motion.button)`
@@ -83,6 +88,44 @@ export const Button = styled(motion.button)`
         padding: ${(props) => props.type === 1 && '15px 20px'};
         padding: ${(props) => props.type === 3 && '15px 20px'};
     }
+`
+
+export const SearchInput = styled.input`
+    outline: none;
+    border: none;
+    background: white;
+    width: 100%;
+    padding: 29px 240px 29px 45px;
+    box-shadow: 0px 30px 30px rgba(99, 122, 166, 0.1);
+    border-radius: 40px;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black01);
+
+    &::placeholder {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: var(--black02);
+        font-weight: 600;
+    }
+
+    @media ${breakpoints.xlg} {
+        padding-right: 150px;
+    }
+    @media ${breakpoints.mb} {
+        padding-right: 120px;
+        padding-left: 20px;
+
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+`
+
+export const InputGroup = styled.div`
+    position: relative;
+    width: 100%;
 `
 
 export const ButtonIconed = styled(motion.button)`

@@ -1,5 +1,5 @@
-import { ButtonGroup, HomeContainer, HomeLeftCol, HomeRightCol, InputGroup, SearchInput } from "@/components/Home"
-import { Button, ButtonIconed, ClientCard, Wrapper } from "@/components/Utils"
+import { ButtonGroup, HomeContainer, HomeLeftCol, HomeRightCol } from "@/components/Home"
+import { Button, ButtonIconed, ClientCard, SearchInput, Wrapper, InputGroup } from "@/components/Utils"
 import images from "@/constants/images"
 
 
@@ -11,7 +11,7 @@ const Home = () => {
 					<h1>Growing your<br /><span>Business</span></h1>
 
 					<InputGroup>
-						<SearchInput placeholder="search your services" />
+						<SearchInput placeholder="search for services" />
 						<Button
 							color="white"
 							bg="orange"
