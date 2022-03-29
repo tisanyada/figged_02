@@ -7,6 +7,7 @@ import client from '@/assets/client-1.png'
 import decorator1 from '@/assets/decorator-1.png'
 import decorator2 from '@/assets/decorator-2.png'
 import decorator3 from '@/assets/decorator-3.png'
+import decorator4 from '@/assets/decorator-4.png'
 import heroimage from '@/assets/heroimage.png'
 import homebg1 from '@/assets/homebg-1.png'
 import homebg2 from '@/assets/homebg-2.png'
@@ -20,6 +21,7 @@ import logo_microsoft from '@/assets/logo-microsoft.svg'
 import services1 from '@/assets/services-1.png'
 import services2 from '@/assets/services-2.png'
 import services3 from '@/assets/services-3.png'
+import services4 from '@/assets/services-4.png'
 
 
 export default {
@@ -32,6 +34,7 @@ export default {
     decorator1,
     decorator2,
     decorator3,
+    decorator4,
     heroimage,
     homebg1,
     homebg2,
@@ -44,5 +47,6 @@ export default {
     logo_microsoft,
     services1,
     services2,
-    services3
+    services3,
+    services4
 }

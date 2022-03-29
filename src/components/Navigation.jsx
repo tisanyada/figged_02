@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import styled from "styled-components"
-import { images } from "../constants"
 import { breakpoints } from "../theme"
 
 export const NavigationContainer = styled.div`
@@ -18,19 +17,21 @@ export const Nav = styled(motion.nav)`
         position: fixed;
         flex-direction: column;
         top: 0;
-        right: -96px;
-        height: 100vh;
-        /* width: 350px; */
-        width: 0;
-        background-color: rgba(247, 132, 48, 0.4);
+        right: 0;
+        height: max-content;
+        border-bottom-left-radius: 40px;
+        background-color: rgba(255, 255, 255, 0.95);
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1em 2em;
-        transition: width .8s ease-in-out;
-        box-shadow: -30px 0px 40px -10px rgba(247, 132, 48, 0.3);
-        backdrop-filter: blur(5px);
+        transition: all 0.8s ease;
+        box-shadow: -30px 0px 40px -10px rgba(0, 0, 0, 0.1);
+        display: none;
+        backdrop-filter: blur(10px);
+        
         &.active {
-            width: 350px;
+            display: flex;
+            width: 250px;
         }
     }
 `
@@ -40,7 +41,7 @@ export const NavLink = styled.a`
     font-size: 16px;
     cursor: pointer;
     font-weight: 450;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 
     &.active {
         color: var(--black02);
@@ -49,8 +50,10 @@ export const NavLink = styled.a`
 
     @media ${breakpoints.lg} {
         color: white;
+        color: var(--black01);
         margin-right: 0;
         margin-bottom: 35px;
+
         &.active {
             color: rgba(255, 255, 255, 0.4);
             font-size: 20px;
@@ -70,7 +73,7 @@ export const NavCloseButton = styled(motion.button)`
 
     @media ${breakpoints.lg} {
         display: block;
-        color: white;
+        color: var(--black01);
         margin: 10px 0 40px 145px;
     }
 `
@@ -97,9 +100,7 @@ export const NavAuthButtons = styled.div`
 
     @media ${breakpoints.lg} {
         flex-direction: column;
-        /* width: 100%; */
-
-        border-top: 2px solid white;
+        border-top: 2px solid var(--black01);
         
         button {
             margin: 20px 0;
@@ -108,9 +109,4 @@ export const NavAuthButtons = styled.div`
             }
         }
     }
-`
-export const NavBg = styled(motion.img)`
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
 `
